@@ -20,24 +20,40 @@
     --grid: 1fr
 }
 
-.logo {
-    font-family: 'Rubik', sans-serif;
-    font-weight: var(--fw-black);
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    color: clr(--clr-brown);
+    color: var(--clr-brown);
     line-height: 28px;
 }
 
 header {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
     background-color: var(--clr-light);
     padding: .4em;
 }
 
-.nav_list {
+footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: .4em;
+}
+
+.nav_logo {
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-black);
+}
+
+.footer_logo > p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-black);
+    color: var(--clr-light);
+}
+
+.nav_item {
     display: flex;
     justify-content: space-around;
     margin: 0;
@@ -45,4 +61,26 @@ header {
     list-style: none;
     font-size: 18px;
     letter-spacing: 1px;
+}
+
+.main_top {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.main_bottom {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--clr-yellow);
+    padding: .4em;
+}
+
+.home_gallery_panel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.browse_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
