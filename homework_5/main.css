@@ -247,9 +247,6 @@ input[type="radio"]:checked + label{
     gap: 5em;
 
     background-color: var(--clr-light);
-    border-width: 1px solid var(--clr-dark);
-
-    align-items: top;
     justify-content: center;
 }
 
