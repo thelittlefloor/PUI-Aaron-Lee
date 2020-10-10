@@ -8,7 +8,7 @@
     --clr-red: #F16A56;
     --clr-yellow: #EFB74A;
     --clr-brown: #41220E;
-    --clr-light: #eeeeee;
+    --clr-light: #FFFDFA;
     --clr-dark: #2C2C2C;
     
     --fw-thin: 100;
@@ -19,6 +19,10 @@
     --fw-black: 900;
 
     --grid: 1fr
+}
+
+hr {
+    color: var(--clr-dark)
 }
 
 a { color: inherit; } 
@@ -237,7 +241,7 @@ input[type="radio"]:checked + label{
     padding-left: 30em;
     padding-right: 30em;
     padding-top: 5em;
-    padding-bottom: 5em;
+    padding-bottom : 5em;
     gap: 5em;
 
     background-color: var(--clr-light);
@@ -296,35 +300,160 @@ input[type="radio"]:checked + label{
 }
 
 /*product_original.html*/
+.product_detail_top_color {
+    position: absolute;
+    top: 54px;
+    background-color: var(--clr-yellow);
+
+    width: 100%;
+    height: 500px;
+    max-height: 500px;
+    z-index: 1;
+}
+
+.product_detail_top_spacer {
+    height: 120px;
+    max-height: 120px
+}
+
+.product_detail_top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    
+}
+
+.product_detail_top > img {
+    justify-items: right;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5em;
+    display: block;
+    z-index: 2;
+}
+
 .product_detail_panel{
     display: grid;
     grid-template-rows: auto auto auto auto auto auto;
     margin: auto;
     padding: 1em;
     gap: 1em;
+
+    justify-content: center;
+
+    background-color: var(--clr-light);
+    width: 700px;
+    max-width: 700px;
+    z-index: 2;
+
+    box-shadow: 2px 2px 5px;
+}
+
+.product_detail_panel > h1 {
+    margin-bottom: 0;
+}
+
+.product_detail_panel_stars {
+    margin-top: 0;
+}
+
+.product_detail_panel_options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em;
+    gap: 1em;
+
+    margin-bottom: 0;
+}
+
+
+.bundle_size_module > h6 {
+    align-self: end;
+
+    font-weight: var(--fw-light);
+
+    display: block;
+    margin-bottom: 0;
+    height: 15px;
+    max-height: 15px;
+}
+
+.glaze_module > h6 {
+    align-content: end;
+
+    font-weight: var(--fw-light);
+
+    display: block;
+    margin-bottom: 0;
+    height: 15px;
+    max-height: 15px;
+}
+
+.quantity_module {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    height: 120px;
+    max-height: 120px;
+}
+
+.quantity_module_spacer {
+    height: 100px;
+    max-height: 100px
+}
+
+.quantity_module_step {
+    display: flex;
+    flex-direction: row;
+}
+
+.quantity_module_step > img {
+    width: 25px;
+    height: 25px;
+
+    margin-top: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.quantity_module_step > h6 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+
+    align-items: center;
+    text-align: center;
+    
+    margin-top: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .bundle_size_button_grid {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 1em;
-    gap: 1em;
+    padding: .5em;
+    gap: .5em;
     background-color: var(--clr-light);
+    font-size: 14px;
+
+    margin-top: 0;
+    align-items: end;
+    height: 50px;
+    max-height: 50px;
 }
 
 .glaze_button_grid {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 1em;
-    gap: 1em;
+    padding:  .5em;
+    gap: .5em;
     background-color: var(--clr-light);
-}
+    font-size: 14px;
 
-.options {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 1em;
-    gap: 1em;
+    margin-top: 0;
+    align-items: end;
+    height: 50px;
+    max-height: 50px;
 }
 
 .quantity_module {
@@ -332,4 +461,41 @@ input[type="radio"]:checked + label{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 1em;
     gap: 1em;
+}
+
+.product_detail_panel > h6 {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.product_detail_add_bag_button {
+    color: var(--clr-red);
+    font-family: 'Roboto', sans-serif;
+    font-weight: var(--fw-medium);
+    border: 2px solid var(--clr-red);
+    border-radius: 2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-right: 5em;
+    align-items: center;
+    justify-items: end;
+    justify-self: end;
+    justify-content: end;
+    text-align: center;
+    display: block;
+}
+
+.allergen {
+    margin-top: 3em;
+    display: block;
+    justify-content: center;
+}
+
+.review_section {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
 }
