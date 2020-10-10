@@ -1,8 +1,10 @@
+/*
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+*/
 
 :root {
     --clr-red: #F16A56;
