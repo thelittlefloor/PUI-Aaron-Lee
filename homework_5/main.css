@@ -242,6 +242,7 @@ input[type="radio"]:checked + label{
 
 /*browse.html*/
 .browse_gallery_header {
+    font-family: 'Roboto', sans-serif;
     position: absolute;
 }
 
@@ -341,6 +342,7 @@ input[type="radio"]:checked + label{
 }
 
 .product_detail_panel{
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-rows: auto auto auto auto auto auto;
     margin: auto;
