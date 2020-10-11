@@ -42,6 +42,7 @@ body {
 }
 
 header {
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 70% 10% 10% 10%;
     background-color: var(--clr-light);
@@ -51,6 +52,7 @@ header {
 }
 
 .nav_button_about {
+    font-family: 'Roboto', sans-serif;
     margin: auto;
     padding-left: 1em;
     padding-right: 1em;
@@ -91,6 +93,7 @@ header {
 }
 
 footer {
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     background-color: var(--clr-dark);
@@ -132,6 +135,7 @@ input[type="radio"]:checked + label{
 }
 
 .nav_item {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-around;
     margin: 0;
@@ -143,6 +147,7 @@ input[type="radio"]:checked + label{
 
 /*homepage.html*/
 .home_content {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,6 +156,7 @@ input[type="radio"]:checked + label{
 }
 
 .home_shop_all_button {
+    font-family: 'Roboto', sans-serif;
     margin: auto;
     background-color: var(--clr-red);
     color: var(--clr-light);
@@ -183,6 +189,7 @@ input[type="radio"]:checked + label{
 }
 
 .main_top {
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 60% 40%;
 
@@ -217,6 +224,7 @@ input[type="radio"]:checked + label{
 }
 
 .main_bottom {
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: var(--clr-yellow);
@@ -238,6 +246,7 @@ input[type="radio"]:checked + label{
 }
 
 .browse_gallery {
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-left: 30em;
