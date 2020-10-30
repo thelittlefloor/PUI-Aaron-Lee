@@ -1,4 +1,4 @@
-document.getElementById("nav_button_bag_count").innerText = localStorage.length;
+document.getElementById("nav_button_bag_count").innerText = Number(localStorage.getItem("itemCount"));
 
 document.getElementById("nav_button_shop").addEventListener("click", function() {
     location.replace("browse.html")

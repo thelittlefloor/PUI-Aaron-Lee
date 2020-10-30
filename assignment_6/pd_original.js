@@ -67,10 +67,16 @@ document.getElementById("product_detail_add_bag_button").addEventListener("click
 	};
 
 	let itemObj_serial = JSON.stringify(itemObj);
-	var itemKey = "item" + (localStorage.length + 1);
-	localStorage.setItem(itemKey, itemObj_serial);
 
-	document.getElementById("nav_button_bag_count").innerText = localStorage.length;
+	console.log(localStorage.getItem("itemCount"));
+
+	var itemCount = Number(localStorage.getItem("itemCount"));
+	itemCount += 1;
+	var itemKey = "item" + (itemCount);
+	localStorage.setItem(itemKey, itemObj_serial);
+	localStorage.setItem("itemCount", itemCount)
+
+	document.getElementById("nav_button_bag_count").innerText = itemCount;
 });
 
 document.getElementById("nav_button_shop").addEventListener("click", function() {
