@@ -63,13 +63,17 @@ header {
 }
 
 #nav_button_shop {
+    border: none;
+
     margin: auto;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: .25em;
     padding-bottom: .25em;
     color: var(--clr-red);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: var(--fw-bold);
     background-color: var(--clr-red);
     color: var(--clr-light);
     border-radius: 1em;
