@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!-- My css -->
         <link rel="stylesheet" href="main.css">
+        <!-- <script type="text/javascript" src="main.js"></script> -->
     </head>
 
     <body>
@@ -14,8 +15,12 @@
         <header>
             <a href="homepage.html" style="text-decoration: none;"><div class="nav_logo">BUN BUN BAKE SHOP</div></a>
             <div class="nav_button_about">ABOUT US</div>
-            <div class="nav_button_shop">SHOP</div>
-            <div class="nav_button_bag">MY BAG</div>
+            <div id="nav_button_shop">SHOP</div>
+            <button id="nav_button_bag">
+                <p class="nav_button_bag_label">MY BAG (</p>
+                <p id="nav_button_bag_count">0</p>
+                <p class="nav_button_bag_label">)</p>
+            </button>
         </header>
 
         <div class="product_detail_top_color">
@@ -27,7 +32,7 @@
         </div>
         <div class="product_detail_top">
             <div></div>
-            <img src="Images/product_detail_original_image.svg">
+            <img id="product_image" src="Images/original_1_none.svg">
             <div class="product_detail_panel">
                 <h1>ORIGINAL</h1>
                 <img src="Images/review_stars.svg" class="product_detail_panel_stars">
@@ -35,28 +40,20 @@
                     <div class="bundle_size_module">
                         <h6>BUNDLE SIZE</h6>
                         <div class="bundle_size_button_grid">
-                            <input type="radio" name="bundle_size" id="1pack" checked="checked">
-                            <label for="1pack">1 PACK</label>
-                            <input type="radio" name="bundle_size" id="3pack">
-                            <label for="3pack">3 PACK</label>
-                            <input type="radio" name="bundle_size" id="6pack">
-                            <label for="6pack">6 PACK</label>
-                            <input type="radio" name="bundle_size" id="12pack">
-                            <label for="12pack">12 PACK</label>
+                            <input type="radio" id="pack1" name="pack" value="10" checked=”checked” onClick="swapImage();"><label for="pack1">1 PACK</label>
+                            <input type="radio" id="pack2" name="pack" value="20" onClick="swapImage();"><label for="pack2">3 PACK</label>
+                            <input type="radio" id="pack3" name="pack" value="30" onClick="swapImage();"><label for="pack3">6 PACK</label>
+                            <input type="radio" id="pack4" name="pack" value="40" onClick="swapImage();"><label for="pack4">12 PACK</label>
                         </div>
                     </div>
         
                     <div class="glaze_module">
                         <h6>GLAZE</h6>
                         <div class="glaze_button_grid">
-                            <input type="radio" name="glaze" id="none" checked="checked">
-                            <label for="none">NONE</label>
-                            <input type="radio" name="glaze" id="sugar">
-                            <label for="sugar">SUGAR</label>
-                            <input type="radio" name="glaze" id="vanilla">
-                            <label for="vanilla">VANILLA</label>
-                            <input type="radio" name="glaze" id="choco">
-                            <label for="choco">CHOCO</label>
+                            <input type="radio" id="glaze1" name="glaze" value="1" checked=”checked” onClick="swapImage();"><label for="glaze1">NONE</label>
+                            <input type="radio" id="glaze2" name="glaze" value="2" onClick="swapImage();"><label for="glaze2">SUGAR</label>
+                            <input type="radio" id="glaze3" name="glaze" value="3" onClick="swapImage();"><label for="glaze3">VANILLA</label>
+                            <input type="radio" id="glaze4" name="glaze" value="4" onClick="swapImage();"><label for="glaze4">CHOCO</label>
                         </div>
                     </div>
     
@@ -65,16 +62,17 @@
                             <h6>   </h6>
                         </div>
                         <div class="quantity_module_step">
-                            <img src="Images/minus_icon.svg">
-                            <h6>1</h6>
-                            <img src="Images/plus_icon.svg">
-                            <h6>$999.99</h6>
+                            <button class="minus-btn disabled" type="button">-</button>
+                            <input type="text" name="pd_productCounter" id="pd_productCount" value="1">
+                            <button class="plus-btn" type="button">+</button>
+                            <p id="pd_dollar">&#36;</p>
+                            <p id="pd_price">999.99</p>
                         </div>
                     </div>
                 </div>
                 
                 <h6>Original cinnamon rolls, every other cinnamon rolls you’ve had are just fakes</h6>
-                <a href="mybag.html" class="product_detail_add_bag_button" style="text-decoration: none;">ADD TO BAG</a>
+                <button id="product_detail_add_bag_button">ADD TO BAG</button>
                 <img src="Images/allergen_image.svg" class="allergen">
             </div>
             <div></div>
@@ -108,5 +106,7 @@
                 <img src="Images/social_media_icons.svg">
             </div>
         </footer>
+
+        <script type="text/javascript" src="main.js"></script>
     </body>
 </html>
