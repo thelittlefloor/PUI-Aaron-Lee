@@ -1,3 +1,5 @@
+document.getElementById("nav_button_bag_count").innerText = Number(localStorage.getItem("itemCount"));
+
 var key = 11;
 var key1 = 10;
 var key2 = 1;
