@@ -1,6 +1,7 @@
 function updateCart(){
     var subtotal_price = 0.0;
     let item_array = [];
+
     var i;
     var arrayLength = Number(localStorage.getItem("itemCount"));
     for(i = 1; i <= arrayLength; i++){
@@ -8,7 +9,7 @@ function updateCart(){
         item_array.push(item_obj);
     }
     
-    console.log(item_array);
+    //console.log(item_array);
     
     //<div id="bag_body_grid">
     var grid = document.getElementById("bag_body_grid");
@@ -32,6 +33,7 @@ function updateCart(){
         panel_info_2.appendChild(document.createTextNode("Price: $" + current_item.price));
         var panel_delete = document.createElement('button');
         panel_delete.classList.add("delete_item_button");
+        panel_delete.value = j;
         panel_delete.appendChild(document.createTextNode("DELETE"));
     
         var panel_info = document.createElement('div');
@@ -83,8 +85,85 @@ function updateCart(){
     
     var subtotal_price_label = document.getElementById("summary_subtotal_price");
     subtotal_price_label.innerText = "$" + subtotal_price;
+
+    document.getElementById("nav_button_bag_count").innerText = Number(localStorage.getItem("itemCount"));
+
+    
+    setDeleteBtnListeners();
 }
 
+function setDeleteBtnListeners(){
+    var deleteBtns = document.getElementsByClassName("delete_item_button");
+    for(var i = 0; i < deleteBtns.length; i++){
+        var btn = deleteBtns[i];
+        btn.addEventListener('click', function(event){
+            removeItem(event);
+        });
+    }
+}
+
+function removeItem(event){
+    var btnClicked = event.target;
+    var index = Number(btnClicked.value);
+
+    //recreate item_array
+    let item_array = [];
+    var arrayLength = Number(localStorage.getItem("itemCount"));
+    for(var i = 1; i <= arrayLength; i++){
+        var item_obj = JSON.parse(localStorage.getItem("item" + i));
+        item_array.push(item_obj);
+    }
+
+    item_array.splice(index, 1);
+    
+    console.log(item_array);
+    
+    localStorage.clear();
+    localStorage.setItem("itemCount", "0");
+    
+    var itemCount = 0;
+
+    for(var l = 0; l < item_array.length; l++){
+        var bunName = item_array[l].bun;
+        var packValue = item_array[l].pack;
+        var glazeValue = item_array[l].glaze;
+        var key = item_array[l].picture;
+        var totalPrice = item_array[l].price;
+        var productCount = item_array[l].quantity;
+        
+        let itemObj = {
+            bun: bunName,
+            pack: packValue,
+            glaze: glazeValue,
+            picture: key,
+            price: totalPrice,
+            quantity: productCount
+        };
+        
+        let itemObj_serial = JSON.stringify(itemObj);
+        itemCount += 1;
+        var itemKey = "item" + (itemCount);
+        localStorage.setItem(itemKey, itemObj_serial);
+    }
+    localStorage.setItem("itemCount", itemCount);
+    
+    //clear div
+    var grid_node = document.getElementById("bag_body_grid");
+    grid_node.textContent = '';
+
+    var nq_node = document.getElementById("bag_item_nq_list");
+    nq_node.textContent = '';
+
+    var price_node = document.getElementById("bag_item_price_list");
+    price_node.textContent = '';
+    
+    item_array = [];
+
+    document.getElementById("nav_button_bag_count").innerText = itemCount;
+    
+    //updateCart
+    updateCart();
+}
 
 document.getElementById("check_out_button").addEventListener("click", function() {
     localStorage.clear();
@@ -105,3 +184,7 @@ document.getElementById("check_out_button").addEventListener("click", function()
     document.getElementById("nav_button_bag_count").innerText = Number(localStorage.getItem("itemCount"));
 });
 
+document.getElementById("nav_button_shop").addEventListener("click", function() {
+    location.replace("browse.html")
+    //console.log("nav_shop_click");
+});
