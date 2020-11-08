@@ -92,6 +92,7 @@ function updateCart(){
     setDeleteBtnListeners();
 }
 
+//adds event listeners to the delete buttons
 function setDeleteBtnListeners(){
     var deleteBtns = document.getElementsByClassName("delete_item_button");
     for(var i = 0; i < deleteBtns.length; i++){
@@ -102,6 +103,7 @@ function setDeleteBtnListeners(){
     }
 }
 
+//removes the item which had its delete button pressed
 function removeItem(event){
     var btnClicked = event.target;
     var index = Number(btnClicked.value);
@@ -165,6 +167,7 @@ function removeItem(event){
     updateCart();
 }
 
+//check out button clears the item page, html div, and the local storage
 document.getElementById("check_out_button").addEventListener("click", function() {
     localStorage.clear();
     localStorage.setItem("itemCount", "0");
