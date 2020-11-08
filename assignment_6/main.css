@@ -617,7 +617,7 @@ input[type="radio"]:checked + label{
     grid-template-columns: 1fr 3fr 1fr 1fr;
 }
 
-.bag_body_grid {
+#bag_body_grid {
     font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -654,7 +654,7 @@ input[type="radio"]:checked + label{
     grid-template-columns: 3fr 1fr;
 }
 
-.summary_subtotal {
+#summary_subtotal {
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
@@ -686,6 +686,8 @@ input[type="radio"]:checked + label{
 }
 
 .bag_item_panel > img{
+    width: 250px;
+    height: 430px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -695,14 +697,19 @@ input[type="radio"]:checked + label{
     font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-rows: auto auto auto;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1em;
     padding: 1em;
     gap: 0;
 
-    justify-content: center;
+    justify-content: left;
 }
 
-.bag_item_panel > h2{
+.item_title_quantity{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: var(--fw-regular);
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -711,41 +718,16 @@ input[type="radio"]:checked + label{
     justify-content: center;
 }
 
-.bag_item_panel > h3{
+.item_total_price{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: var(--fw-light);
     text-align: center;
     margin-top: 1em;
     margin-bottom: 4em;
     justify-items: center;
     justify-self: center;
     justify-content: center;
-}
-
-.bag_item_actions {
-    display: grid;
-    grid-template-columns: auto auto;
-
-    gap: 1em;
-}
-
-.edit_item_button {
-    color: var(--clr-red);
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--clr-red);
-    color: var(--clr-light);
-    border: 2px solid var(--clr-red);
-    font-size: 14px;
-
-    border-radius: 2em;
-    padding-top: .25em;
-    padding-bottom: .25em;
-    padding-left: .5em;
-    padding-right: .5em;
-    align-items: center;
-    justify-items: center;
-    justify-self: center;
-    justify-content: center;
-    text-align: center;
-    display: block;
 }
 
 .delete_item_button {
@@ -767,4 +749,23 @@ input[type="radio"]:checked + label{
     justify-content: center;
     text-align: center;
     display: block;
+}
+
+#check_out_button {
+    border: none;
+
+    margin: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    color: var(--clr-red);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-red);
+    color: var(--clr-light);
+    border-radius: 1em;
+    align-items: center;
+    justify-items: center;
 }

@@ -31,112 +31,30 @@
 
         <div class="bag_body">
             <div></div>
-            <div class="bag_body_grid">
-                <div class="bag_item_panel">
-                    <img src="Images/browse_original_image.svg"/>
-                    <div class="bag_item_panel_info">
-                        <h2>ORIGINAL x1</h2>
-                        <h3>Price: $999.99</h3>
-                        <div class="bag_item_actions">
-                            <a href="" class="edit_item_button" style="text-decoration: none;">EDIT</a>
-                            <a href="" class="delete_item_button" style="text-decoration: none;">DELETE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bag_item_panel">
-                    <img src="Images/browse_gluten_image.svg"/>
-                    <div class="bag_item_panel_info">
-                        <h2>ORIGINAL GLUTEN FREE x1</h2>
-                        <h3>Price: $999.99</h3>
-                        <div class="bag_item_actions">
-                            <a href="" class="edit_item_button" style="text-decoration: none;">EDIT</a>
-                            <a href="" class="delete_item_button" style="text-decoration: none;">DELETE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bag_item_panel">
-                    <img src="Images/browse_walnut_image.svg"/>
-                    <div class="bag_item_panel_info">
-                        <h2>WALNUT x1</h2>
-                        <h3>Price: $999.99</h3>
-                        <div class="bag_item_actions">
-                            <a href="" class="edit_item_button" style="text-decoration: none;">EDIT</a>
-                            <a href="" class="delete_item_button" style="text-decoration: none;">DELETE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bag_item_panel">
-                    <img src="Images/browse_pecan_image.svg"/>
-                    <div class="bag_item_panel_info">
-                        <h2>CARAMEL PECAN x1</h2>
-                        <h3>Price: $999.99</h3>
-                        <div class="bag_item_actions">
-                            <a href="" class="edit_item_button" style="text-decoration: none;">EDIT</a>
-                            <a href="" class="delete_item_button" style="text-decoration: none;">DELETE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bag_item_panel">
-                    <img src="Images/browse_blackberry_image.svg"/>
-                    <div class="bag_item_panel_info">
-                        <h2>BLACKBERRY x1</h2>
-                        <h3>Price: $999.99</h3>
-                        <div class="bag_item_actions">
-                            <a href="" class="edit_item_button" style="text-decoration: none;">EDIT</a>
-                            <a href="" class="delete_item_button" style="text-decoration: none;">DELETE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bag_item_panel">
-                    <img src="Images/browse_pumpkin_image.svg"/>
-                    <div class="bag_item_panel_info">
-                        <h2>PUMPKIN SPICE x1</h2>
-                        <h3>Price: $999.99</h3>
-                        <div class="bag_item_actions">
-                            <a href="" class="edit_item_button" style="text-decoration: none;">EDIT</a>
-                            <a href="" class="delete_item_button" style="text-decoration: none;">DELETE</a>
-                        </div>
-                    </div>
-                </div>
+            <div id="bag_body_grid">
                 
+
             </div>
             <div class="bag_body_summary" style="background-color:#FFFFFF;">
                 <h1>Summary</h1>
                 
                 <div class="summary_items">
                     <div>
-                        <ul class="bag_item_nq_list">
-                            <li class="bag_item_nq">Original x1</li>
-                            <li class="bag_item_nq">Original Gluten Free x1</li>
-                            <li class="bag_item_nq">Walnut x1</li>
-                            <li class="bag_item_nq">Caramel Pecan x1</li>
-                            <li class="bag_item_nq">Blackberry x1</li>
-                            <li class="bag_item_nq">Pumpkin Spice x1</li>
+                        <ul id="bag_item_nq_list">
                         </ul>
                     </div>
                     <div>
-                        <ul class="bag_item_price_list">
-                            <li class="bag_item_price">$999.99</li>
-                            <li class="bag_item_price">$999.99</li>
-                            <li class="bag_item_price">$999.99</li>
-                            <li class="bag_item_price">$999.99</li>
-                            <li class="bag_item_price">$999.99</li>
-                            <li class="bag_item_price">$999.99</li>
+                        <ul id="bag_item_price_list">
                         </ul>
                     </div>
                 </div>
                 
-                <div class="summary_subtotal">
-                    <h4>Subtotal</h4>
-                    <p>$5999.94</p>
+                <div id="summary_subtotal">
+                    <p>Subtotal</p>
+                    <p id="summary_subtotal_price">$0</p>
                 </div>
                 
-                <a href="" class="check_out_button" style="text-decoration: none;">CHECK OUT</a>
+                <button id="check_out_button">CHECK OUT</button>
 
             </div>
             <div></div>
@@ -169,6 +87,10 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="bag.js"></script>
+        <script>
+            updateCart();
+            document.getElementById("nav_button_bag_count").innerText = Number(localStorage.getItem("itemCount"));
+        </script>
     </body>
 </html>

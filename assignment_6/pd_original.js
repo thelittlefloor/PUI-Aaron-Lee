@@ -15,7 +15,7 @@ var price = document.getElementById("pd_price").innerText;
 //price calculation function
 function priceTotal() {
     var total = Math.round(((productCount * price) + Number.EPSILON) * 100) / 100;
-    document.getElementById("pd_price").innerText = total
+    document.getElementById("pd_price").innerText = total;
 }
  
 //quantity button plus
@@ -50,21 +50,25 @@ document.getElementById("product_detail_add_bag_button").addEventListener("click
 	console.log("add_bag_click");
 	
 	var packValue;
-	if(key1 == 10){ packValue = "1_pack" }
-	else if(key1 == 20){ packValue = "3_pack" }
-	else if(key1 == 30){ packValue = "6_pack" }
-	else if(key1 == 40){ packValue = "12_pack" }
+	if(key1 == 10){ packValue = "1-Pack" }
+	else if(key1 == 20){ packValue = "3-Pack" }
+	else if(key1 == 30){ packValue = "6-Pack" }
+	else if(key1 == 40){ packValue = "12-Pack" }
 
 	var glazeValue;
-	if(key2 == 1){ glazeValue = "none" }
-	else if(key2 == 2){ glazeValue = "sugar" }
-	else if(key2 == 3){ glazeValue = "vanilla" }
-	else if(key2 == 4){ glazeValue = "choco" }
+	if(key2 == 1){ glazeValue = "No Glaze" }
+	else if(key2 == 2){ glazeValue = "Sugar Glaze" }
+	else if(key2 == 3){ glazeValue = "Vanilla Glaze" }
+	else if(key2 == 4){ glazeValue = "Choco Glaze" }
+
+	var totalPrice = productCount*12;
 
 	let itemObj = {
-		bun: "original",
+		bun: "ORIGINAL",
 		pack: packValue,
 		glaze: glazeValue,
+		picture: key,
+		price: totalPrice,
 		quantity: productCount
 	};
 
