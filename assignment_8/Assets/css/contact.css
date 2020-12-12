@@ -32,6 +32,7 @@ font-family: 'Merriweather', serif;
     left: var(--menu-left-margin);
     background: none;
     display: flex;
+    z-index: 2;
 }
 
 .header__button {
