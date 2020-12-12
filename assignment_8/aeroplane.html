@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+	<title>PUI Fall 2020 Assignment 8 - Aaron Lee</title>
+    <link rel="stylesheet" href="Assets/css/project.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="Assets/js/p5.js"></script>
+    <script src="Assets/js/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <header class="header">
+		<button class="header__button" id="btnNav" type="button">
+			<i class="material-icons">menu</i>
+		</button>
+	</header>
+	
+	<nav class="nav">
+		<div class="nav__links">
+			<a class="nav__link" href="index.html" >
+				Works
+			</a>
+			<a class="nav__link" href="gallery.html">
+				Renders
+			</a>
+			<a class="nav__link" href="contact.html">
+				Contact
+			</a>
+		</div>
+		<div class="nav__overlay"></div>
+    </nav>
+
+    <div class="container-fluid project_page_background"></div>
+
+    <div class="page_title">
+        <video autoplay muted loop class="title_vid">
+            <source src="Assets/video/AeroPlane_short.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div class="container-fluid my-container title_vid_text">
+            <div class="col-sm-1 my-col">
+                spacer
+            </div>
+            <div class="col-sm-10 my-col">
+                <div class="row my-row row_space">
+                    spacer
+                </div>
+                <div class="row my-row project_title">
+                    <p>Aero-plane</p>
+                </div>
+                <div class="row my-row project_summary">
+                    <p>A Handheld Force-feedback Device that Renders Weight Motion Illusion on a Virtual 2D Plane</p>
+                </div>
+                <div class="row my-row row_space">
+                    spacer
+                </div>
+            </div>
+            <div class="col-sm-1 my-col">
+                spacer
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid my-container project_content">
+        <div class="col-sm-1 col-lg-2 my-col">
+            spacer
+        </div>
+        <div class="col-sm-10 col-lg-8 my-col">
+            <div class="row my-row img_row_space">
+                spacer
+            </div>
+            <div class="row my-row">
+                <div class="col-sm-8 my-col">
+                    <img class="content_img" src="Assets/img/AeroPlane/AeroPlaneImage1.png">
+                </div>
+                <div class="col-sm-4 my-col content_text">
+                    <p>Aero-plane is handheld device that renders weight motion illusion on a virtual 2D plane.</p>
+                </div>
+            </div>
+            <div class="row my-row img_row_space">
+                spacer
+            </div>
+            <div class="row my-row">
+                <div class="col-sm-8 my-col">
+                    <img class="content_img" src="Assets/img/AeroPlane/AeroPlaneImage2.png">
+                </div>
+                <div class="col-sm-4 my-col content_text">
+                    <p>The device consists of 2 jet propellors that are capable of pushing out 7.1N each</p>
+                </div>
+            </div><div class="row my-row img_row_space">
+                spacer
+            </div>
+            <div class="row my-row">
+                <div class="col-sm-8 my-col">
+                    <img class="content_img" src="Assets/img/AeroPlane/AeroPlaneImage3.png">
+                </div>
+                <div class="col-sm-4 my-col content_text">
+                    <p>The device is capable of simulating variable weight of a handheld object in VR as well as variable center of mass</p>
+                </div>
+            </div>
+            <div class="row my-row img_row_space">
+                spacer
+            </div>
+            <div class="row my-row">
+                <div class="col-sm-8 my-col">
+                    <img class="content_img" src="Assets/img/AeroPlane/AeroPlaneImage4.png">
+                </div>
+                <div class="col-sm-4 my-col content_text">
+                    <p>There are various other ways it can be used, such as simulating the muzzle rise of a gun...</p>
+                </div>
+            </div>
+            <div class="row my-row img_row_space">
+                spacer
+            </div>
+            <div class="row my-row">
+                <div class="col-sm-8 my-col">
+                    <img class="content_img" src="Assets/img/AeroPlane/AeroPlaneImage5.png">
+                </div>
+                <div class="col-sm-4 my-col content_text">
+                    <p>...or in AR and fishing situations</p>
+                </div>
+            </div>
+            <div class="row my-row img_row_space">
+                spacer
+            </div>
+        </div>
+        <div class="col-sm-1 col-lg-2 my-col">
+            spacer
+        </div>
+    </div>
+
+    <script src="Assets/js/sketch.js"></script>
+    <script src="Assets/js/main.js"></script>
+</body>
+</html>  
