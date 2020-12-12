@@ -9,6 +9,7 @@ font-family: 'Merriweather', serif;
     --clr-white: #FFFFFF;
     --clr-light: #F1F1F1;
     --clr-dark: #2F2F2F;
+    --clr-grey: #a0a0a0;
     
     --fw-thin: 100;
     --fw-light: 300;
@@ -16,6 +17,109 @@ font-family: 'Merriweather', serif;
     --fw-medium: 500;
     --fw-bold: 700;
     --fw-black: 900;
+
+    --menu-left-margin: 3px;
+}
+
+.preload * {
+    transition: none !important;
+}
+
+.header {
+    position: fixed;
+    top: 50%;
+    left: var(--menu-left-margin);
+    background: none;
+    display: flex;
+    z-index: 2;
+}
+
+.header__button {
+    flex-shrink: 0;
+    background: none;
+    outline: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+.nav__links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 200px;
+    background: var(--clr-light);
+    transform: translateX(-200px);
+    transition: transform 0.3s;
+}
+
+.nav--open .nav__links {
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav__link {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--clr-dark);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: transform 0.2s;
+    position: relative;
+}
+
+
+.nav__link:hover {
+    color: var(--clr-dark);
+    text-decoration: none;
+}
+
+.nav__link::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 5px;
+    background: var(--clr-dark);
+    position: absolute;
+    bottom: 40%;
+    opacity: 35%;
+    z-index: 1;
+    transition: width .3s;
+} 
+
+.nav__link:hover::after {
+    width: 75%;
+} 
+
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 10px solid red;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.nav--open .nav__overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu_spacer {
+    width: 0;
+    border: 10px solid red;
 }
 
 a { color: inherit; } 

@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <head>
 	<title>PUI Fall 2020 Assignment 8 - Aaron Lee</title>
-    <link rel="stylesheet" href="Assets/css/main.css">
+    <link rel="stylesheet" href="Assets/css/project.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="Assets/js/p5.js"></script>
     <script src="Assets/js/addons/p5.sound.min.js"></script>
 </head>
 <body>
+    <header class="header">
+		<button class="header__button" id="btnNav" type="button">
+			<i class="material-icons">menu</i>
+		</button>
+	</header>
+	
+	<nav class="nav">
+		<div class="nav__links">
+			<a class="nav__link" href="index.html" >
+				Works
+			</a>
+			<a class="nav__link" href="gallery.html">
+				Renders
+			</a>
+			<a class="nav__link" href="contact.html">
+				Contact
+			</a>
+		</div>
+		<div class="nav__overlay"></div>
+    </nav>
+
     <div class="container-fluid project_page_background"></div>
 
     <div class="page_title">
@@ -22,16 +44,16 @@
                 spacer
             </div>
             <div class="col-sm-10 my-col">
-                <div class="row my-row home_title_space">
+                <div class="row my-row row_space">
                     spacer
                 </div>
-                <div id="title_elastick" class="row my-row project_title">
+                <div class="row my-row project_title">
                     <p>ElaStick</p>
                 </div>
-                <div id="title_elastick_summary" class="row my-row project_title">
+                <div class="row my-row project_summary">
                     <p>A Handheld Variable Stiffness Display for Rendering Dynamic Haptic Response of Flexible Object</p>
                 </div>
-                <div class="row my-row home_title_space">
+                <div class="row my-row row_space">
                     spacer
                 </div>
             </div>
@@ -46,50 +68,50 @@
             spacer
         </div>
         <div class="col-sm-10 col-lg-8 my-col">
-            <div class="row my-row title_img_space">
+            <div class="row my-row img_row_space">
                 spacer
             </div>
             <div class="row my-row">
                 <div class="col-sm-8 my-col">
-                    <img class="content_img" src="Assets/img/ElaStickImage1.png">
+                    <img class="content_img" src="Assets/img/ElaStick/ElaStickImage1.png">
                 </div>
-                <div class="col-sm-4 my-col">
-                    ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects
+                <div class="col-sm-4 my-col content_text">
+                    <p>ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects</p>
                 </div>
             </div>
-            <div class="row my-row title_img_space">
+            <div class="row my-row img_row_space">
                 spacer
             </div>
             <div class="row my-row">
                 <div class="col-sm-8 my-col">
-                    <img class="content_img" src="Assets/img/ElaStickImage2.png">
+                    <img class="content_img" src="Assets/img/ElaStick/ElaStickImage2.png">
                 </div>
-                <div class="col-sm-4 my-col">
-                    ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects
+                <div class="col-sm-4 my-col content_text">
+                    <p>ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects</p>
                 </div>
-            </div><div class="row my-row title_img_space">
+            </div><div class="row my-row img_row_space">
                 spacer
             </div>
             <div class="row my-row">
                 <div class="col-sm-8 my-col">
-                    <img class="content_img" src="Assets/img/ElaStickImage3.jpg">
+                    <img class="content_img" src="Assets/img/ElaStick/ElaStickImage3.jpg">
                 </div>
-                <div class="col-sm-4 my-col">
-                    ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects
+                <div class="col-sm-4 my-col content_text">
+                    <p>ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects</p>
                 </div>
             </div>
-            <div class="row my-row title_img_space">
+            <div class="row my-row img_row_space">
                 spacer
             </div>
             <div class="row my-row">
                 <div class="col-sm-8 my-col">
-                    <img class="content_img" src="Assets/img/ElaStickImage4.png">
+                    <img class="content_img" src="Assets/img/ElaStick/ElaStickImage4.png">
                 </div>
-                <div class="col-sm-4 my-col">
-                    ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects
+                <div class="col-sm-4 my-col content_text">
+                    <p>ElaStick is a variable-stiffness controller that simulates the dynamic response resulting from shaking or swinging flexible virtual objects</p>
                 </div>
             </div>
-            <div class="row my-row title_img_space">
+            <div class="row my-row img_row_space">
                 spacer
             </div>
         </div>
@@ -99,5 +121,6 @@
     </div>
 
     <script src="Assets/js/sketch.js"></script>
+    <script src="Assets/js/main.js"></script>
 </body>
-</html> 
+</html>  

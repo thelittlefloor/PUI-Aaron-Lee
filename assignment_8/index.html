@@ -4,74 +4,97 @@
     <link rel="stylesheet" href="Assets/css/main.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="Assets/js/p5.js"></script>
     <script src="Assets/js/addons/p5.sound.min.js"></script>
 </head>
 <body>
-    <div class="container background"></div>
+    <header class="header">
+		<button class="header__button" id="btnNav" type="button">
+			<i class="material-icons">menu</i>
+		</button>
+	</header>
+	
+	<nav class="nav">
+		<div class="nav__links">
+			<a class="nav__link" href="index.html" >
+				Works
+			</a>
+			<a class="nav__link" href="gallery.html">
+				Renders
+			</a>
+			<a class="nav__link" href="contact.html">
+				Contact
+			</a>
+		</div>
+		<div class="nav__overlay"></div>
+    </nav>
 
     <div class="container-fluid my-container">
-        <div class="col-sm-1 my-col">
-            spacer 
-        </div>
-        <div class="col-sm-10 my-col">
-            <div class="row my-row home_title_space">
+        <div class="row">
+            <div class="col-sm-1 my-col">
+                spacer 
+            </div>
+            <div class="col-sm-10 my-col">
+                <div class="row my-row home_title_space">
+                    spacer
+                </div>
+                <div id="title_name" class="row my-row home_title">
+                    <p>Aaron Lee</p>
+                </div>
+                <div id="title_interest" class="row my-row home_title">
+                    <p>Industrial Design - UX/UI - VR</p>
+                </div>
+                <div class="row my-row home_title_space">
+                    spacer
+                </div>
+            </div>
+            <div class="col-sm-1 my-col">
                 spacer
             </div>
-            <div id="title_name" class="row my-row home_title">
-                <p>Aaron Lee</p>
-            </div>
-            <div id="title_interest" class="row my-row home_title">
-                <p>Industrial Design - UX/UI - VR</p>
-            </div>
-            <div class="row my-row home_title_space">
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-lg-3 my-col">
                 spacer
             </div>
-        </div>
-        <div class="col-sm-1 my-col">
-            spacer
+            <div class="col-sm-8 col-lg-6 my-col">
+                <div class="row my-row title_img_space">
+                    spacer
+                </div>
+                <div class="row my-row">
+                    <a href="elastick.html"><img id="ElaStickTitle" class="title_img" src="Assets/img/ElaStick/ElaStickTitle.png"></a>
+                </div>
+                <div class="row my-row title_img_space">
+                    spacer
+                </div>
+                <div class="row my-row">
+                    <img id="ClearVisTitle" class="title_img" src="Assets/img/ClearVis/ClearVisTitle.jpg">
+                </div>
+                <div class="row my-row title_img_space">
+                    spacer
+                </div>
+                <div class="row my-row">
+                    <img id="AeroPlaneTitle" class="title_img" src="Assets/img/AeroPlane/AeroPlaneTitle.png">
+                </div>
+                <div class="row my-row title_img_space">
+                    spacer
+                </div>
+                <div class="row my-row">
+                    <img id="ActivEarringTitle" class="title_img" src="Assets/img/ActivEarring/ActivEarringTitle.png">
+                </div>
+                <div class="row my-row title_img_space">
+                    spacer
+                </div>
+            </div>
+            <div class="col-sm-2 col-lg-3 my-col">
+                spacer
+            </div>
         </div>
     </div>
 
-    <div class="container-fluid my-container">
-        <div class="col-sm-2 col-lg-3 my-col">
-            spacer
-        </div>
-        <div class="col-sm-8 col-lg-6 my-col">
-            <div class="row my-row title_img_space">
-                spacer
-            </div>
-            <div class="row my-row">
-                <a href="elastick.html"><img id="ElaStickTitle" class="title_img" src="Assets/img/ElaStickTitle.png"></a>
-            </div>
-            <div class="row my-row title_img_space">
-                spacer
-            </div>
-            <div class="row my-row">
-                <img id="ClearVisTitle" class="title_img" src="Assets/img/ClearVisTitle.jpg">
-            </div>
-            <div class="row my-row title_img_space">
-                spacer
-            </div>
-            <div class="row my-row">
-                <img id="AeroPlaneTitle" class="title_img" src="Assets/img/AeroPlaneTitle.png">
-            </div>
-            <div class="row my-row title_img_space">
-                spacer
-            </div>
-            <div class="row my-row">
-                <img id="ActivEarringTitle" class="title_img" src="Assets/img/ActivEarringTitle.png">
-            </div>
-            <div class="row my-row title_img_space">
-                spacer
-            </div>
-        </div>
-        <div class="col-sm-2 col-lg-3 my-col">
-            spacer
-        </div>
-    </div>
 
     <script src="Assets/js/sketch.js"></script>
+    <script src="Assets/js/main.js"></script>
 </body>
 </html> 
