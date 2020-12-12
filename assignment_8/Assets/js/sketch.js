@@ -1,4 +1,4 @@
-//javascript code based on the Processing.org code provided by Etienne Jacob (https://necessarydisorder.wordpress.com/)
+//javascript code based on the Processing code provided by Etienne Jacob (https://necessarydisorder.wordpress.com/)
 
 var numFrames = 400;
 
