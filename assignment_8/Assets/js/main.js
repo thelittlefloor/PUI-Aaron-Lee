@@ -1,3 +1,6 @@
+//event listeners given to nav bar menu button to open the nav bar
+//event listener given to area-nav bar to close the nav bar
+
 window.addEventListener("load", () => {
 	document.body.classList.remove("preload");
 });

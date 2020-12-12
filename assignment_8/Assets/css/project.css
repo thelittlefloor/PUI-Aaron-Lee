@@ -5,6 +5,7 @@ font-family: 'Lato', sans-serif;
 font-family: 'Merriweather', serif;
 */
 
+/* DEFINE color values and font weight + menu bar left margin */
 :root {
     --clr-white: #FFFFFF;
     --clr-light: #F1F1F1;
@@ -21,6 +22,7 @@ font-family: 'Merriweather', serif;
     --menu-left-margin: 3px;
 }
 
+/* nav bar CSS + hover crossline effect, more detailed comments on main.css */
 .preload * {
     transition: none !important;
 }
@@ -102,7 +104,6 @@ font-family: 'Merriweather', serif;
     position: fixed;
     top: 0;
     left: 0;
-    border: 10px solid red;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
@@ -132,18 +133,6 @@ body {
 
 body {
     margin: 10px;
-}
-
-.my-container {
-    border: 1px solid red;
-}
-
-.my-row {
-    border: 3px solid green;
-}
-
-.my-col {
-    border: 3px dotted blue;
 }
 
 .home_title {
